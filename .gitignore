@@ -335,3 +335,6 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+
+src/fb-scrapper/data
