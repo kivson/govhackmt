@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OuvidoriaService } from '../ouvidoria.service';
+import { Mensagem } from '../models/mensagem.model';
 
 @Component({
   selector: 'app-estatisticas',
@@ -16,12 +17,18 @@ export class EstatisticasComponent implements OnInit {
   enderecoQuantidade: Number = 0;
   totalDados: Number = 0;
 
+  tiposDeManifestacao: Array<Mensagem> = new Array<Mensagem>();
+  intencoes: Array<string> = new Array<string>();
+
   constructor(private _ouvidoriaService: OuvidoriaService) { }
 
   ngOnInit() {
     this._ouvidoriaService
       .obterDados()
       .subscribe(response => {
+        this.tiposDeManifestacao = response;
+        this.intencoes = response.map(x => x.intents[0].intent);
+        
         let intents = response.map(x => x.intents[0].intent);
 
         let entities = response.map(x => x.entities && x.entities.length > 0 ? x.entities[0].value : null).filter(x => x != null);
