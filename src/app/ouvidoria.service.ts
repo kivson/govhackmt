@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
+import { Mensagem } from './models/mensagem.model';
+
 @Injectable()
 export class OuvidoriaService {
 
@@ -9,7 +11,7 @@ export class OuvidoriaService {
 
   constructor(private _http: Http) { }
 
-  obterDados(): Observable<any> {
+  obterDados(): Observable<Array<Mensagem>> {
     return this._http
       .get(this.url)
       .map(response => response.json())
