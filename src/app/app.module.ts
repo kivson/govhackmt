@@ -6,14 +6,16 @@ import { RouterModule }  from '@angular/router';
 
 import { ChartModule } from 'angular2-highcharts';
 
+import { OuvidoriaService } from './ouvidoria.service';
+
 import { AppComponent } from './app.component';
 import { EstatisticasComponent } from './estatisticas/estatisticas.component';
 import { ElogiosComponent } from './elogios/elogios.component';
 import { ReclamacoesComponent } from './reclamacoes/reclamacoes.component';
 import { DuvidasComponent } from './duvidas/duvidas.component';
 import { StatsComponent } from './stats/stats.component';
-
-import { OuvidoriaService } from './ouvidoria.service';
+import { IntencoesComponent } from './charts/intencoes/intencoes.component';
+import { TiposManifestacoesComponent } from './charts/tipos-manifestacoes/tipos-manifestacoes.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { OuvidoriaService } from './ouvidoria.service';
     ElogiosComponent,
     ReclamacoesComponent,
     DuvidasComponent,
-    StatsComponent
+    StatsComponent,
+    IntencoesComponent,
+    TiposManifestacoesComponent
   ],
   imports: [
     BrowserModule,

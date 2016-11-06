@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OuvidoriaService } from '../ouvidoria.service';
+import { Mensagem } from '../models/mensagem.model';
 
 @Component({
   selector: 'app-stats',
@@ -8,7 +9,8 @@ import { OuvidoriaService } from '../ouvidoria.service';
 })
 export class StatsComponent implements OnInit {
 
-  tiposDeManifestacoesOptions = {};
+  tiposDeManifestacao: Array<Mensagem> = new Array<Mensagem>();
+  intencoes: Array<string> = new Array<string>();
 
   constructor(private _ouvidoriaService: OuvidoriaService) { }
 
@@ -17,40 +19,9 @@ export class StatsComponent implements OnInit {
     this._ouvidoriaService
       .obterDados()
       .subscribe(response => {
-        // var intents = response.map(x => x.intents[0].intent);
-        // console.log(intents);
-        // var entities = response.map(x => x.entities && x.entities.length > 0 ? x.entities[0].value : null).filter(x => x != null);
-        // console.log(entities);
 
-        let totalDeManifestacoes = response.length;
-
-        let totalDeElogios = response.filter(x => x.entities && x.entities.length > 0 && x.entities[0].value == "elogio").length;
-        let elogiosPerc = parseFloat(((totalDeElogios * 100) / (totalDeManifestacoes)).toFixed(2));
-
-        let totalDeReclamacoes = response.filter(x => x.entities && x.entities.length > 0 && x.entities[0].value == "reclamação").length;
-        let reclamacoesPerc = parseFloat(((totalDeReclamacoes * 100) / (totalDeManifestacoes)).toFixed(2));
-
-        let totalDeDuvidas = totalDeManifestacoes - (totalDeElogios + totalDeReclamacoes);
-        let duvidasPerc = parseFloat(((totalDeDuvidas * 100) / (totalDeManifestacoes)).toFixed(2));
-
-        this.tiposDeManifestacoesOptions = {
-          chart: { type: 'pie' },
-          title: { text: 'Estatísticas' },
-          series: [{
-            name: 'Tipo de Manifestação',
-            colorByPoint: true,
-            data: [{
-              name: 'Elogios',
-              y: elogiosPerc
-            }, {
-              name: 'Reclamações',
-              y: reclamacoesPerc
-            }, {
-              name: 'Dúvidas',
-              y: duvidasPerc
-            }]
-          }]
-        };
+        this.tiposDeManifestacao = response;
+        this.intencoes = response.map(x => x.intents[0].intent);
 
       }, err => {
         console.error(err.body);
