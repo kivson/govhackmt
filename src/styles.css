@@ -36,14 +36,14 @@ nav ul li {
 }
 
 nav a {
-	color: silver;
+	color: darkgray;
 	text-decoration: none;
+	font-weight: bold;
 }
 
 nav a.active {
-	color: darkgrey;
+	color: grey;
 	text-decoration: underline;
-
 }
 
 main .estatisticas {
