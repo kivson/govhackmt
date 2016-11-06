@@ -1,17 +1,17 @@
 # Problema
 O Governo do Estado possui muitos orgãos, tais como, a SEDUC, SES e SESP tanto na capital quanto no interior.
 Cada orgão é responsável pelas informações que são disponibilizadas.
-Infelizmente isso gera uma descentralização, o cidadão precisa entrar em contato com cada um dos orgãos para obter informações.
-E nem sempre é fácil encontrar número de telefones, endereço e emails e às vezes quando encontram e ligam ou mandam mensagens, são respondidos apenas no horário de funcionamento do orgão ou acontece uma demora na entrega da informação para o cidadão. Criando um desgaste ou gerando uma má impressão dos serviços oferecidos pelo Governo do Estado.
+Infelizmente, isso gera uma descentralização, o cidadão precisa entrar em contato com cada um dos orgãos para obter informações.
+E nem sempre é fácil encontrar número de telefones, endereço e emails e às vezes quando encontram e ligam, são respondidos apenas no horário de funcionamento do orgão ou acontece uma demora na entrega das informações ao cidadão. Criando um desgaste ou gerando uma má impressão dos serviços oferecidos pelo Governo do Estado.
 
 # Solução
-Um canal de comunicação rápido com o cidadão que esteja disponível 24 horas por dias e que sirva para solucionar dúvidas, realizar elogios e fazer reclamações.
+Um canal de comunicação com o cidadão, centralizado e rápido que esteja disponível 24 horas por dias e que sirva para solucionar dúvidas, realizar elogios e fazer reclamações.
 
 # Proposta
 Chat bot integrado com redes sociais e painel de controle administrativo para gerência das mensagens e um segundo nível de atendimento.
 
 # MVP
-Chat bot simples que fornece informações sobre locais e telefones de serviços publicos e coleta dados de ouvidoria.
+Chat bot simples de facebook que fornece informações sobre locais e telefones de alguns serviços publicos e coleta dados de reclamações e elogios.
 
 # Exemplo de Perguntas
 ## Horário
@@ -41,7 +41,6 @@ Chat bot simples que fornece informações sobre locais e telefones de serviços
 - *"Gostaria de fazer uma reclamação ao `[DETRAN|SEDUC|SESP]`"*
  
 ## Exemplo Conversa
-
 ```chat
 Cidadão - Olá
 Governo - Olá! Em que posso ajudar?
@@ -62,15 +61,20 @@ Governo - De nada, se precisar estamos aqui.
 - Ferramentas novas para a equipe
 - Integração entre serviços
 
-# Tecnologias utilizadas
-- Watson - API de bots.
-- Facebook - API do Messenger
-- MongoBD - Armazenamento dos dados
-- Angular 2 - Painel administrativo
-- node.js - Integração de serviços
-- Bluemix - Infraestrutura de serviços
-
 # Roadmap
 - Melhorar a inteligencia artificial do bot para melhor categorização dos dados
 - Refatorar painel de controle
 - Agregar mais serviços e bases de dados
+
+# Tecnologias utilizadas
+- [Watson](https://https://www.ibm.com/watson) - Base de dados de informações.
+- [Node Red](https://nodered.org) - Integrador de APIs
+- [Facebook](https://developer.facebook.com) - API do Messenger
+- [Cloudant](https://cloudant.com) - Armazenamento dos dados
+- [Angular 2](https://angular.io) - Painel administrativo
+- [node.js](https://nodejs.org) - Integração de serviços
+- [Bluemix](https://console.ng.bluemix.net) - Infraestrutura de serviços
+- [Azure](https://azure.microsoft.com/Azure) - Painel administrativo
+
+# Liçença
+Esse serviço utliza a [licença Apache 2.0](https://github.com/node-red/node-red/blob/master/LICENSE) para o chat bot e o painel administrativo.
