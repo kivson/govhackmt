@@ -35,7 +35,6 @@ export class EstatisticasComponent implements OnInit {
         this.reclamacoesDados = reclamacoes.length;
         this.elogiosDados = elogios.length;
 
-        // TODO: map response => numeros de cada estatisticas;
         this.dados = response;
       }, err => {
         console.error(err.body);
