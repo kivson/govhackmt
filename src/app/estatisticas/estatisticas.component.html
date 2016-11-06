@@ -1,21 +1,17 @@
-<div style="display: block;">
-  <h2>Dúvidas</h2>
-  <canvas baseChart width="400" height="400"
-              [data]="duvidasDados"
-              [chartType]="tipoDoGrafico"
-              [labels]="labelsDoGrafico"></canvas>
+<div class="charts">
+  <div class="chart">
+    <h2>Dúvidas</h2>
+    <progress [attr.value]="duvidasDados" [attr.max]="totalDados"></progress>
+    <p>Total: {{duvidasDados}}</p>
+  </div>
+  <div class="chart">
+    <h2>Elogios</h2>
+    <progress [attr.value]="elogiosDados" [attr.max]="totalDados"></progress>
+    <p>Total: {{elogiosDados}}</p>
+  </div>
+  <div class="chart">
+    <h2>Reclamações</h2>
+    <progress [attr.value]="reclamacoesDados" [attr.max]="totalDados"></progress>
+    <p>Total: {{reclamacoesDados}}</p>
+  </div>
 </div>
-<!--<div class="chart" style="display: block;">
-  <h2>Elogios</h2>
-  <canvas baseChart width="400" height="400"
-              [data]="elogiosDados"
-              [chartType]="tipoDoGrafico"
-              [labels]="labelsDoGrafico"></canvas>
-</div>
-<div class="chart" style="display: block;">
-  <h2>Reclamações</h2>
-  <canvas baseChart width="400" height="400"
-              [data]="reclamacoesDados"
-              [chartType]="tipoDoGrafico"
-              [labels]="labelsDoGrafico"></canvas>-->
-<!--</div>-->

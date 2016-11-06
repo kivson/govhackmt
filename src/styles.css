@@ -3,10 +3,23 @@ body {
 	font-family: "Segoe UI", sans-serif;
 	color: slategrey;
 	background-color: whitesmoke;
+	display: flex;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
+	flex-flow: column nowrap;
+}
+
+body h1, body nav, body main{
+	flex: 0 1 auto;
 }
 
 body h1 {
 	padding-left: 2rem;
+}
+
+body main {
+	flex: 1 1 auto;
 }
 
 nav ul {
@@ -30,31 +43,50 @@ nav a {
 nav a.active {
 	color: darkgrey;
 	text-decoration: underline;
+
 }
 
 main .charts {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-around;
 	align-content: stretch;
 	align-items: stretch;
 	flex-flow: row nowrap; /* media query */
 }
 
 main .mensagens {
-	columns: 3; /* media query */
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-content: flex-start;
+	align-items: stretch;
+	height: 80vh;
 }
 
 .mensagem {
-	padding: 1rem;
+	padding: 0.7rem;
+	border-radius: 1rem;
+	border: solid silver 1px;
+	margin: 0.5rem;
+	margin-top: 0;
+	width: 20vw;
+	height: 3rem;
+	overflow: auto;
+}
+
+.mensagem p{
+	margin: 0;
 }
 
 .chart {
-	padding: 2rem;
+	margin: 0.5rem;
+	padding: 0.7rem;
 	color: currentColor;
-}
-
-.chart canvas {
+	width: calc(30vw + 0.5rem);
 	border-radius: 1rem;
 	border: solid currentColor 2px;
-	width: calc(30vw - 1.5rem);
+}
+
+.chart h2 {
+	margin-top: 0;
 }
