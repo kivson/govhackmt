@@ -1,5 +1,5 @@
 <div class="mensagens">
-  <div class="mensagem">
-    <p>{{mensagem}}</p>
+  <div class="mensagem" *ngFor="let duvida of duvidas">
+    <p>{{duvida.input.text}}</p>
   </div>
 </div>
