@@ -1,15 +1,13 @@
 <nav>
-  Cabeçalho
-  <a routerLink="/" routerLinkActive="active">Estatísticas</a>
-  <a routerLink="/elogios" routerLinkActive="active">Elogios</a>
-  <a routerLink="/reclamacoes" routerLinkActive="active">Reclamações</a>
-  <a routerLink="/duvidas" routerLinkActive="active">Dúvidas</a>
+  <ul>
+    <li><a routerLink="/" routerLinkActive="active">Estatísticas</a></li>
+    <li><a routerLink="/elogios" routerLinkActive="active">Elogios</a></li>
+    <li><a routerLink="/reclamacoes" routerLinkActive="active">Reclamações</a></li>
+    <li><a routerLink="/duvidas" routerLinkActive="active">Dúvidas</a></li>
+  </ul>
 </nav>
 
 <main>
+  <h1>Painel lindo</h1>
   <router-outlet></router-outlet>
 </main>
-
-<footer>
-  Rodapé
-</footer>

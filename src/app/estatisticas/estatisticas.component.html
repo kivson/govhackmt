@@ -1,5 +1,21 @@
-<div style="display: block;">
+<div class="chart" style="display: block;">
+  <h2>Dúvidas</h2>
   <canvas baseChart width="400" height="400"
-              [data]="lineChartData"
-              [chartType]="'line'"></canvas>
+              [data]="duvidasDados"
+              [chartType]="tipoDoGrafico"
+              [labels]="labelsDoGrafico"></canvas>
+</div>
+<div class="chart" style="display: block;">
+  <h2>Elogios</h2>
+  <canvas baseChart width="400" height="400"
+              [data]="elogiosDados"
+              [chartType]="tipoDoGrafico"
+              [labels]="labelsDoGrafico"></canvas>
+</div>
+<div class="chart" style="display: block;">
+  <h2>Reclamações</h2>
+  <canvas baseChart width="400" height="400"
+              [data]="reclamacoesDados"
+              [chartType]="tipoDoGrafico"
+              [labels]="labelsDoGrafico"></canvas>
 </div>

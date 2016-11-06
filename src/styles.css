@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+nav ul {
+	display: inline-block;
+}
+
+nav ul li {
+	list-style: none;
+}
+
+main {
+	display: flex;
+}
+
+main chart, main list {
+}
