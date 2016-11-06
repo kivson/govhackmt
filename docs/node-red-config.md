@@ -10,3 +10,5 @@ api de conversação do Watson.
 O Watson responde com um json contendo a mensagem de resposta, bem como outros meta dados da classificação da pergunta.
 A partir disso uma mensagem de resposta é formatada e enviada para o usuário pela api do Facebook, e os dados e metadados
 da pergunta e da resposta do Watson são armazenados em um banco para posterior analise.
+
+O arquivo node_red.json contém a configuracão do Node-RED.
