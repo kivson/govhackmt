@@ -7,9 +7,18 @@ nav ul li {
 	list-style: none;
 }
 
-main {
+main, main .mensagens {
 	display: flex;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
+	flex-flow: column nowrap;
 }
 
-main chart, main list {
+main .chart, main .mensagem, main .mensagens {
+	flex: 0 1 auto;
+}
+
+main .mensagens {
+	flex-flow: row nowrap;
 }
