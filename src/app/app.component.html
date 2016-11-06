@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<nav>
+  Cabeçalho
+  <a routerLink="/" routerLinkActive="active">Estatísticas</a>
+  <a routerLink="/elogios" routerLinkActive="active">Elogios</a>
+  <a routerLink="/reclamacoes" routerLinkActive="active">Reclamações</a>
+  <a routerLink="/duvidas" routerLinkActive="active">Dúvidas</a>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  Rodapé
+</footer>
