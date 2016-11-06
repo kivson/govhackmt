@@ -8,7 +8,8 @@
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "fb:scrap": "node ./src/fb-scrapper/scrapper.js"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +39,7 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
+    "moment": "^2.15.2",
     "protractor": "4.0.9",
     "request": "^2.78.0",
     "ts-node": "1.2.1",

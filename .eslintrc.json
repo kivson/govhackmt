@@ -137,7 +137,7 @@
 		"no-process-env": "error",
 		"no-process-exit": "warn",
 		"no-restricted-modules": ["error", "domain", "v8", "vm"],
-		"no-sync": "error",
+		//"no-sync": "error",
 
 		//Stylistic rules
 		"array-bracket-spacing": "warn",
