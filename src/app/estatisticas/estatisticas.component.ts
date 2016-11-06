@@ -9,6 +9,7 @@ import { OuvidoriaService } from '../ouvidoria.service';
 export class EstatisticasComponent implements OnInit {
 
   dados: Array<any>;
+  lineChartData: Array<Number>;
 
   constructor(private _ouvidoriaService: OuvidoriaService) { }
 
@@ -16,7 +17,7 @@ export class EstatisticasComponent implements OnInit {
     this._ouvidoriaService
       .obterDados()
       .subscribe(response => {
-        console.log(this.dados);
+        //TODO: map response => numeros de cada estatisticas;
         this.dados = response;
       }, err => {
         console.error(err.body);
