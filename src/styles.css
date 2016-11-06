@@ -1,24 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+	font-family: "Segoe UI", sans-serif;
+	color: slategrey;
+	background-color: whitesmoke;
+}
+
+body h1 {
+	padding-left: 2rem;
+}
+
 nav ul {
-	display: inline-block;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 
 nav ul li {
 	list-style: none;
+	display: inline-block;
 }
 
-main, main .mensagens {
+nav a {
+	color: silver;
+	text-decoration: none;
+}
+
+nav a.active {
+	color: darkgrey;
+	text-decoration: underline;
+}
+
+main .charts {
 	display: flex;
 	justify-content: flex-start;
 	align-content: stretch;
 	align-items: stretch;
-	flex-flow: column nowrap;
-}
-
-main .chart, main .mensagem, main .mensagens {
-	flex: 0 1 auto;
+	flex-flow: row nowrap; /* media query */
 }
 
 main .mensagens {
-	flex-flow: row nowrap;
+	columns: 3; /* media query */
+}
+
+.mensagem {
+	padding: 1rem;
+}
+
+.chart {
+	padding: 2rem;
+	color: currentColor;
+}
+
+.chart canvas {
+	border-radius: 1rem;
+	border: solid currentColor 2px;
+	width: calc(30vw - 1.5rem);
 }
