@@ -46,12 +46,25 @@ nav a.active {
 
 }
 
+main .estatisticas {
+	display: flex;
+	justify-content: space-around;
+	align-content: stretch;
+	align-items: stretch;
+	flex-flow: row wrap;
+}
+
 main .charts {
 	display: flex;
 	justify-content: space-around;
 	align-content: stretch;
 	align-items: stretch;
-	flex-flow: row nowrap; /* media query */
+	flex-flow: column wrap; /* media query */
+	width: 50vw;
+}
+
+main .grafico {
+	width: 45vw;
 }
 
 main .mensagens {
@@ -79,8 +92,8 @@ main .mensagens {
 }
 
 .chart {
-	margin: 0.5rem;
-	padding: 0.7rem;
+	margin: 0.2rem;
+	padding: 0.2rem 0.7rem 0 0.7rem;
 	color: currentColor;
 	width: calc(30vw + 0.5rem);
 	border-radius: 1rem;

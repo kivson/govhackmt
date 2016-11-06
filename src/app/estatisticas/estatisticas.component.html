@@ -1,20 +1,23 @@
-<div class="charts">
-  <div class="chart">
-    <h2>Dúvidas</h2>
-    <progress [attr.value]="duvidasDados" [attr.max]="totalDados"></progress>
-    <p>Total: {{duvidasDados}}</p>
+<div class="estatisticas">
+  <div class="grafico">
+    <app-tipos-manifestacoes [tiposDeManifestacoes]="tiposDeManifestacao"></app-tipos-manifestacoes>
+    <app-intencoes [intencoes]="intencoes"></app-intencoes>
   </div>
-  <div class="chart">
-    <h2>Elogios</h2>
-    <progress [attr.value]="elogiosDados" [attr.max]="totalDados"></progress>
-    <p>Total: {{elogiosDados}}</p>
-  </div>
-  <div class="chart">
-    <h2>Reclamações</h2>
-    <progress [attr.value]="reclamacoesDados" [attr.max]="totalDados"></progress>
-    <p>Total: {{reclamacoesDados}}</p>
+  <div class="charts">
+    <div class="chart">
+      <h2>Dúvidas</h2>
+      <progress [attr.value]="duvidasDados" [attr.max]="totalDados"></progress>
+      <p>Total: {{duvidasDados}}</p>
+    </div>
+    <div class="chart">
+      <h2>Elogios</h2>
+      <progress [attr.value]="elogiosDados" [attr.max]="totalDados"></progress>
+      <p>Total: {{elogiosDados}}</p>
+    </div>
+    <div class="chart">
+      <h2>Reclamações</h2>
+      <progress [attr.value]="reclamacoesDados" [attr.max]="totalDados"></progress>
+      <p>Total: {{reclamacoesDados}}</p>
+    </div>
   </div>
 </div>
-
-<app-tipos-manifestacoes [tiposDeManifestacoes]="tiposDeManifestacao"></app-tipos-manifestacoes>
-<app-intencoes [intencoes]="intencoes"></app-intencoes>
